@@ -3,4 +3,9 @@
   extends: [
     'github>saltstack/salt-winrepo-ng//.cicd/presets/default',
   ],
+  customDatasources: {
+    "example": {
+      "defaultRegistryUrlTemplate": "file://versions.json",
+    },
+  },
 }
