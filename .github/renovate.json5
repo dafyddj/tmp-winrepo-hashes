@@ -5,7 +5,7 @@
   ],
   customDatasources: {
     "example": {
-      "defaultRegistryUrlTemplate": "file://versions.json",
+      "defaultRegistryUrlTemplate": "https://github.com/dafyddj/tmp-winrepo-hashes/raw/refs/heads/main/versions.json",
     },
   },
 }
