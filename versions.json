@@ -1,7 +1,12 @@
 {
 	"releases": [
 		{
-			"version": "1.0.1"
+			"version": "1.0.1",
+			"digest": "def"
+		},
+		{
+			"version": "1.0",
+			"digest": "abc"
 		}
 	]
 }
