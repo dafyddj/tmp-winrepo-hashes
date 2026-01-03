@@ -3,9 +3,27 @@
   extends: [
     'github>saltstack/salt-winrepo-ng//.cicd/presets/default',
   ],
+	"customManagers": [
+		{
+			"customType": "regex",
+			"managerFilePatterns": ["**/*.sls"],
+			"matchStrings": [
+				"# hashes: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>\\S+?)(?: packageName=(?<packageName>\\S+?))?\\s+- [\"']?(?<currentValue>.+?)[\"']?: (?<currentDigest>.+?)\\s"
+			],
+			"versioningTemplate": "loose"
+		}
+	],
   customDatasources: {
     "example": {
       "defaultRegistryUrlTemplate": "https://github.com/dafyddj/tmp-winrepo-hashes/raw/refs/heads/main/versions.json",
     },
   },
+  packageRules: [
+		{
+			"matchFileNames": ["**/*.sls"],
+			"extends": [
+				":automergeDisabled",
+			],
+    },
+  ],
 }
