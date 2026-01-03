@@ -4,7 +4,7 @@
 - '1.0'
 {% endload -%}
 
-{% load_yaml as versions -%}
+{% load_yaml as hashes -%}
 # hashes: datasource=custom.example depName=example
 - '1.0': sha
 {% endload -%}
