@@ -6,7 +6,7 @@
 
 {% load_yaml as hashes -%}
 # hashes: datasource=custom.example depName=example
-- '1.0': abc
+- '1.0.1': def
 {% endload -%}
 
 example:
