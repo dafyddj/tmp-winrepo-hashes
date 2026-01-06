@@ -162,6 +162,7 @@ jobs:
         run: |
           if [ -f "$REPO_JSON_FILE" ]; then
             .cicd/transform-json < "$REPO_JSON_FILE"
+            .cicd/generate-index
             echo "::group::Display resulting directory structure"
             ls --almost-all --recursive --ignore node_modules --ignore .git
             echo "::endgroup::"
